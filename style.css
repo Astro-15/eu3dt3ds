@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+ 
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  padding-top: 12px;
+  background-color: #666666;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  text-align: start;
+}
+
+h1, h2, h3, h4, p, small, li {
+  color: #F0F8FF;
+}
+
+a {
+  font-family: "Quicksand", sans-serif;
+  color: #FFF68F;
+}
+
+a:hover {
+  font-family: "Quicksand", sans-serif;
+  color: #2B4842;
+}
+  
+.tl {
+  position: -webkit-fixed !important;
+  position: fixed !important;
+  bottom: 0px !important;
+  right: 0px !important;
+  width: 200px !important;  
+  height: auto !important;  
+  z-index: 1000 !important;
+  pointer-events: none !important; 
+}
+
+@media (max-width: 600px) {
+  .tl {
+    width: 180px !important; 
+    bottom: 0px !important;
+    right: 0px !important;
+    bottom: calc(5px + env(safe-area-inset-bottom)) !important;
+    right: calc(5px + env(safe-area-inset-right)) !important;
+  }
+}
+
+.gradient-outline {
+  position: relative;
+  color: #F0F8FF; 
+}
+
+.gradient-outline::before {
+  content: attr(data-text); 
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: #444444; 
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent; 
+}
+
+.divider {
+  width: 100%;
+  border: 1px solid #F0F8FF;
+}
+
+.btn {
+  background-color: #888888;
+  color: #ffffff;
+  border-color: #999999;
+  height: 25px;
+}
